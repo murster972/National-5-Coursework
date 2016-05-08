@@ -1,0 +1,88 @@
+function cust_name_val(usr_inp, id){
+	/*
+		Change so user cannot enter only a space and validate for first and last name
+	*/
+	var alph  = "abcdefghijklmnopqqrstuvwxyz ";
+		inpt_numb = parseInt(id.replace("cust_input_", ""));
+		illegal = check_legal(alph, usr_inp);
+
+	if(usr_inp.length < 150 && (usr_inp.length > 0 || usr_inp.length == 0) && !(illegal)){
+		$("#" + id).removeClass("input_invalid");
+		cust_names[inpt_numb - 1] = usr_inp;
+		cust_names_errors[inpt_numb - 1] = 0;
+	}
+
+	else{
+		console.log("shit");
+		$("#" + id).addClass("input_invalid");
+		cust_names[inpt_numb - 1] = "";
+		cust_names_errors[inpt_numb - 1] = -1;
+	}
+
+	var errors = 0;
+
+	for(var i = 0; i < cust_names_errors.length; ++i){
+		if(cust_names_errors[i] == -1){
+			errors = 1;
+		}
+	}
+
+	error_show(errors);
+}
+
+function cust_tick_val(usr_inp, id){
+	var inpt_numb = parseInt(id.replace("cust_input_", ""));
+		numbs = "0123456789"
+		illegal = check_legal(numbs, usr_inp);
+
+	if(!(isNaN(parseInt(usr_inp))) && parseInt(usr_inp) >= 2 && parseInt(usr_inp) <= 20 && !(illegal)){
+		$("#" + id).removeClass("input_invalid");
+		cust_tickets[inpt_numb - 1] = parseInt(usr_inp);
+	}
+
+	else if(usr_inp == ""){
+		$("#" + id).removeClass("input_invalid");
+		cust_tickets[inpt_numb - 1] = 0;
+	}
+
+	else{
+		$("#" + id).addClass("input_invalid");
+		cust_tickets[inpt_numb - 1] = -1;
+	}
+
+	var errors = 0;
+
+	for(var i = 0; i < cust_tickets.length; ++i){
+		if(cust_tickets[i] == -1){
+			errors = 1;
+		}
+	}
+
+	console.log(cust_tickets);
+	error_show(errors);
+}
+
+function error_show(show_err){
+	if(!(show_err)){
+		$("#error_container").hide();
+		/*$("#error_container").removeClass("error_container_show");
+		$("#error_container").addClass("error_container_hide");*/
+	}
+
+	else{
+		$("#error_container").show();
+		/*$("#error_container").removeClass("error_container_hide");
+		$("#error_container").addClass("error_container_show");*/
+	}
+}
+
+function check_legal(legal, val){
+	illegal = 0;
+
+	for(var i = 0; i < val.length; ++i){
+		if(legal.indexOf(val[i].toLowerCase()) == -1){
+			illegal = 1;
+		}
+	}
+	return illegal
+}

@@ -1,0 +1,181 @@
+@font-face {
+    font-family: FiraSans;
+    src: url("fonts/FiraSans-Regular.ttf");
+}
+
+@font-face {
+    font-family: FiraSansLight;
+    src: url("fonts/FiraSans-Light.ttf");
+}
+
+@font-face {
+    font-family: ChunkFive;
+    src: url("fonts/Chunkfive.otf");
+}
+
+body, p, ul{
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+
+body{
+	/*background-color: #1abc9c; after welcome*/
+	/*background-image: url("../images/bg.jpg");*/
+	background-color: #014A81;
+}
+
+#main_container{
+	/*width: 90%; for mobile
+	trying to find way to resize to this after certain point*/
+	width: 500px;
+	height: auto;
+	margin: 0 auto;
+}
+
+#heading_container{
+	width: auto;
+	height: auto;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	font-family: FiraSansLight;
+	font-size: 30px;
+	color: #fff;
+	text-align: center;
+	background-color: #2980B9;
+}
+
+#forward_butn_container{
+	width: 100%;
+	height: auto;
+}
+
+.user_butns{
+	width: 100%;
+	font-family: FiraSansLight;
+	float: left;
+	font-size: 40px;
+	color: #fff;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	background: linear-gradient(150deg, #59ABE3 50%, #3498DB 50%);
+    background-size: 250% 100%;
+    background-position:right bottom;
+    transition:all .5s ease;
+}
+
+.user_butns:hover{
+	background-position:left bottom;
+}
+
+#error_container{
+	width: auto;
+	height: auto;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: #e74c3c;
+	font-family: FiraSansLight;
+	font-size: 25px;
+	color: #fff;
+	text-align: center;
+	padding-left: 10px;
+	float: left;
+	padding-right: 10px;
+	display: none;
+	-moz-transition: all .5s ease-in;
+    -o-transition: all .5s ease-in;
+    -webkit-transition: all .5s ease-in;
+    transition: all .5s ease-in;
+}
+
+#input_containers{
+	width: 100%;
+	height: auto;
+	float: right;
+	padding: 0;
+}
+
+.input_cont{
+	width: 100%;
+	height: 50px;
+	background-color: #fff;
+	border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #E8E8E8;
+    -moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+}
+
+.input_style{
+	width: 90%;
+	height: 100%;
+	background-color: #fff;
+	border: 0;
+	outline: 0;
+	padding: 0;
+	box-shadow: 0;
+	font-family: FiraSans;
+	font-size: 20px;
+	color: #000;
+	text-align: center;
+	float: left;
+	-moz-transition: all .1s ease-in;
+    -o-transition: all .1s ease-in;
+    -webkit-transition: all .1s ease-in;
+    transition: all .1s ease-in;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #E8E8E8;
+}
+
+.input_invalid{
+	background-color: #c0392b;
+	color: #fff;
+	border-bottom-color: #e74c3c;
+}
+
+.inpt_butn{
+	width: 10%;
+	height: 100%;
+	background-color: #fff;
+	float: right;
+	font-family: FiraSans;
+	font-size: 25px;
+	color: #000;
+	text-align: center;
+	-moz-transition: all .15s ease-in;
+    -o-transition: all .15s ease-in;
+    -webkit-transition: all .15s ease-in;
+    transition: all .15s ease-in;
+    cursor: pointer;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #E8E8E8;
+}
+
+.input_style:focus + .inpt_butn{
+	width: 0;
+	font-size: 0;
+}
+
+.input_style:focus{
+	width: 95%;
+	border-left: 5px solid #000;
+	transition-delay: .1s;
+}
+
+.inpt_butn:hover{
+	background-color: #000;
+	color: #fff;
+}
+
+.inpt_butn_txt_pos{
+	margin-top: 10px;
+}
+
+#out_padd{
+	padding: 5px;
+}

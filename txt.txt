@@ -1,0 +1,4 @@
+get customer names
+get tickets bought
+select random customer for backstage pass
+outpit customer details and winner of prize draw

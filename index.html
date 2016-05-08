@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="author" content="Murray Watson">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1">
+        <title>
+            Customer Names
+        </title>
+        <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+        <script type="text/javascript" src="scripts/jquery-1.11.2.js"></script>
+        <script type="text/javascript" src="scripts/jquery.easing.1.3.js"></script>
+        <script type="text/javascript" src="scripts/main.js"></script>
+        <script type="text/javascript" src="scripts/validation.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $(".input_style").prop("disabled", false).val("");      //resets inputs for firefox
+                window.addEventListener('resize', check_size, false);
+                check_size();                                           //sets the intial size
+            })
+
+            //checks if inner width is less then 550px, if so it resizes the main container
+            //and changes padding
+            function check_size(){
+                if(window.innerWidth <= 550){
+                    $("#main_container").width("90%");
+                    $("#main_container").css({"padding-top": "5%"});
+                    $("#input_containers").css({"padding-bottom": "5.5%"});
+                }
+
+                else{
+                    $("#main_container").width("500px");
+                     $("#main_container").css({"padding-top": "5px"});
+                     $("#input_containers").css({"padding-bottom": "5.5%"});
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="main_container">
+            <div id="heading_container"></div>
+            <!-- next button: start -->
+            <div id="forward_butn_container">
+                <div class="user_butns" id="next_butn">></div>
+            </div>
+            <!-- next button: end -->
+            <div id="error_container" class="error_container_hide"></div>
+            <!-- Input containers: start -->
+            <div id="input_containers">
+                <div class="input_cont" id="cust1">
+                    <input type="text" class="input_style" id="cust_input_1" placeholder="Customer Name">
+                    <div class="inpt_butn" id="butn1"><p class="inpt_butn_txt_pos">✕</p></div>
+                </div>
+                <div class="input_cont" id="cust2">
+                    <input type="text" class="input_style" id="cust_input_2" placeholder="Customer Name">
+                    <div class="inpt_butn" id="butn2"><p class="inpt_butn_txt_pos">✕</p></div>
+                </div>
+                <div class="input_cont" id="cust3">
+                    <input type="text" class="input_style" id="cust_input_3" placeholder="Customer Name">
+                    <div class="inpt_butn" id="butn3"><p class="inpt_butn_txt_pos">✕</p></div>
+                </div>
+                <div class="input_cont" id="cust4">
+                    <input type="text" class="input_style" id="cust_input_4" placeholder="Customer Name">
+                    <div class="inpt_butn" id="butn4"><p class="inpt_butn_txt_pos">✕</p></div>
+                </div>
+                <div class="input_cont" id="cust5">
+                    <input type="text" class="input_style" id="cust_input_5" placeholder="Customer Name">
+                    <div class="inpt_butn" id="butn5"><p class="inpt_butn_txt_pos">✕</p></div>
+                </div>
+                <div class="input_cont" id="cust6">
+                    <input type="text" class="input_style" id="cust_input_6" placeholder="Customer Name">
+                    <div class="inpt_butn" id="butn6"><p class="inpt_butn_txt_pos">✕</p></div>
+                </div>
+                <div class="input_cont" id="cust7">
+                    <input type="text" class="input_style" id="cust_input_7" placeholder="Customer Name">
+                    <div class="inpt_butn" id="butn7"><p class="inpt_butn_txt_pos">✕</p></div>
+                </div>
+                <div class="input_cont" id="cust8">
+                    <input type="text" class="input_style" id="cust_input_8" placeholder="Customer Name">
+                    <div class="inpt_butn" id="butn8"><p class="inpt_butn_txt_pos">✕</p></div>
+                </div>
+                <div class="input_cont" id="cust9">
+                    <input type="text" class="input_style" id="cust_input_9" placeholder="Customer Name">
+                    <div class="inpt_butn" id="butn9"><p class="inpt_butn_txt_pos">✕</p></div>
+                </div>
+                <div class="input_cont" id="cust10">
+                    <input type="text" class="input_style" id="cust_input_10" placeholder="Customer Name">
+                    <div class="inpt_butn" id="butn10"><p class="inpt_butn_txt_pos">✕</p></div>
+                </div>
+            </div>
+            <!-- Input containers: end -->
+        </div>
+    </body>
+</html>
